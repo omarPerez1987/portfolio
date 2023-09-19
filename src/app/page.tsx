@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <header>
-        <h1>el turambao</h1>
+        <h1 className="text-3xl font-bold underline">el turambao</h1>
       </header>
       <main>
         <div className="container">
@@ -19,7 +19,12 @@ export default function Home() {
             alt="letras codigo backend"
             width={850}
             height={800}
-            style={{ width: "60%" }}
+            style={{
+              width: "60%",
+              opacity: 0,
+              animation:
+                "flash 150ms 0.5s 2 linear, watch 150ms 1.2s 1 linear forwards",
+            }}
             priority={true}
             className="image-express"
           />
@@ -28,7 +33,12 @@ export default function Home() {
             alt="cara hombre con barba represenatada como arte"
             width={600}
             height={800}
-            style={{ width: "40%" }}
+            style={{
+              width: "40%",
+              opacity: 0,
+              animation:
+                "flash 150ms 1.2s 2 linear, watch 150ms 1.7s 1 linear forwards",
+            }}
             priority={true}
             className="image-back"
           />
@@ -40,7 +50,12 @@ export default function Home() {
             alt="cara hombre con barba"
             width={600}
             height={800}
-            style={{ width: "40%" }}
+            style={{
+              width: "40%",
+              opacity: 0,
+              animation:
+                "flash 150ms 1s 2 linear, watch 150ms 1.5s 1 linear forwards",
+            }}
             priority={true}
             className="image-front"
           />
@@ -49,12 +64,14 @@ export default function Home() {
             alt="fragmento codigo frontend"
             width={850}
             height={800}
-            style={{ width: "60%" }}
+            style={{
+              width: "60%",
+              opacity: 0,
+              animation:
+                "flash 150ms 2 linear, watch 150ms 0.8s 1 linear forwards",
+            }}
             priority={true}
             className="image-react"
-            data-te-animation-init
-            data-te-animation-reset="true"
-            data-te-animation="[slide-right_1s_ease-in-out]"
           />
         </div>
       </main>
@@ -76,10 +93,25 @@ export default function Home() {
             max-width: 100%;
           }
 
-          // .image-express {
-          //   animation-name: flash-react;
-          //   data-te-animation="[drop-in_0.5s]"
-          // }
+          // ANIMATIONS
+
+          @keyframes flash {
+            0% {
+              opacity: 0;
+            }
+            50% {
+              opacity: 1;
+            }
+            100% {
+              opacity: 0;
+            }
+          }
+
+          @keyframes watch {
+            to {
+              opacity: 1;
+            }
+          }
         `}
       </style>
     </>
