@@ -1,10 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
-import Express_back from "next/image";
+import Logos_back from "next/image";
 import Face_back from "next/image";
 import Face_front from "next/image";
-import React_front from "next/image";
+import Logo_front from "next/image";
 
 export default function Home() {
   return (
@@ -12,10 +12,23 @@ export default function Home() {
       <header>
         <h1 className="text-3xl font-bold underline">el turambao</h1>
       </header>
+
+      <section 
+        className="grid grid-cols-2 grid-rows-2 justify-items-center"
+        style={{margin: '2rem 5% ', width: 'auto', border: '2px solid blue'}}
+        >
+        <div>
+          <h1>backend</h1>
+        </div>
+        <div>
+          <h1>backend</h1>
+        </div>
+      </section>
+
       <main>
-        <div className="container">
-          <Express_back
-            src={"/image/express_codec.png"}
+        <section className="container">
+          <Logos_back
+            src={"/image/logos_back.png"}
             alt="letras codigo backend"
             width={850}
             height={800}
@@ -42,9 +55,9 @@ export default function Home() {
             priority={true}
             className="image-back"
           />
-        </div>
+        </section>
 
-        <div className="container">
+        <section className="container">
           <Face_front
             src={"/image/face_right_cut.png"}
             alt="cara hombre con barba"
@@ -59,8 +72,8 @@ export default function Home() {
             priority={true}
             className="image-front"
           />
-          <React_front
-            src={"/image/react_codec.png"}
+          <Logo_front
+            src={"/image/logos_front.png"}
             alt="fragmento codigo frontend"
             width={850}
             height={800}
@@ -73,7 +86,7 @@ export default function Home() {
             priority={true}
             className="image-react"
           />
-        </div>
+        </section>
       </main>
 
       <style jsx>
@@ -82,10 +95,11 @@ export default function Home() {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 1rem 4rem;
+            margin: 0rem 5%;
           }
 
           .container {
+            border: 2px solid red;
             display: flex;
             justify-content: center;
             align-items: end;
