@@ -7,3 +7,10 @@
   padding: 0;
   background: white;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: large;
+}

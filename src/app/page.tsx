@@ -13,19 +13,32 @@ export default function Home() {
         <h1 className="text-3xl font-bold underline">el turambao</h1>
       </header>
 
-      <section 
-        className="grid grid-cols-2 grid-rows-2 justify-items-center"
-        style={{margin: '2rem 5% ', width: 'auto', border: '2px solid blue'}}
+      <main
+        className="grid grid-cols-2 grid-rows-1 justify-items-center font-sans"
+        style={{ margin: "2rem 5% ", width: "auto" }}
+      >
+        <div
+          className="mt-16 text-center w-6/12"
+          style={{
+            opacity: "0",
+            animation: "watch 150ms 2.4s 1 linear forwards",
+          }}
         >
-        <div>
-          <h1>backend</h1>
+          <h1 className="font-black text-3xl">/ backend /</h1>
+          <p>Desarrollador backend que construye la infraestructura robusta, segura y optimizada</p>
         </div>
-        <div>
-          <h1>backend</h1>
-        </div>
-      </section>
 
-      <main>
+        <div
+          className="mt-16 text-center w-6/12 "
+          style={{
+            opacity: "0",
+            animation: "watch 150ms 2.4s 1 linear forwards",
+          }}
+        >
+          <h1 className="font-black text-3xl">{`< frontend >`}</h1>
+          <p>Desarrollador front-end que crea diseños elegantes, interactivos y responsivos</p>
+        </div>
+
         <section className="container">
           <Logos_back
             src={"/image/logos_back.png"}
@@ -89,22 +102,16 @@ export default function Home() {
         </section>
       </main>
 
+      <main></main>
+
       <style jsx>
         {`
-          main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0rem 5%;
-          }
-
           .container {
-            border: 2px solid red;
+            margin-top: -8rem;
             display: flex;
             justify-content: center;
             align-items: end;
-            width: 50%;
-            max-width: 100%;
+            width: 100%;
           }
 
           // ANIMATIONS
