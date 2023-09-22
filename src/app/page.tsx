@@ -8,7 +8,7 @@ export default function Home() {
       <header>
         <h1 className="text-3xl font-bold underline">mi portfolio</h1>
       </header>
-      <Banner />
+      <Banner/>
     </>
   );
 }
