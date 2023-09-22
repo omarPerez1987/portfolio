@@ -28,62 +28,52 @@ export default function Banner() {
         className="grid grid-cols-2 grid-rows-1 justify-items-center font-sans"
         style={{ margin: "2rem 5% ", width: "auto" }}
       >
-        {/* *********************************************************************** */}
+        {/* ******** TITLE BANNER *************************************************************** */}
+
         <div
           className="mt-16 text-center w-6/12"
           style={{
-            opacity: "0",
-            animation: "watch 150ms 2.4s 1 linear forwards",
+            animation: timeAnimationIntro
+              ? "watch 150ms 2.4s 1 linear"
+              : "",
           }}
         >
-          {mouseOverFaceFront ? (
-            <>
-              <h1 className="font-black text-3xl" style={{ opacity: "0" }}>
-                / backend /
-              </h1>
-              <p style={{ opacity: "0" }}>
-                Desarrollador backend que construye la infraestructura robusta,
-                segura y optimizada
-              </p>
-            </>
-          ) : (
-            <>
-              <h1 className="font-black text-3xl">/ BACKEND /</h1>
-              <p>
-                Desarrollador backend que construye la infraestructura robusta,
-                segura y optimizada
-              </p>
-            </>
-          )}
+          <h1
+            className="font-black text-3xl"
+            style={{
+              opacity: mouseOverFaceFront || timeAnimationIntro ? 0 : 1,
+            }}
+          >
+            / BACKEND /
+          </h1>
+          <p
+            style={{
+              opacity: mouseOverFaceFront || timeAnimationIntro ? 0 : 1,
+            }}
+          >
+            Desarrollador backend que construye la infraestructura robusta,
+            segura y optimizada
+          </p>
         </div>
 
         <div
-          className="mt-16 text-center w-6/12 "
+          className="mt-16 text-center w-6/12"
           style={{
-            opacity: "0",
-            animation: "watch 150ms 2.4s 1 linear forwards",
+            animation: timeAnimationIntro
+              ? "watch 150ms 2.4s 1 linear "
+              : "",
           }}
         >
-          {mouseOverFaceBack ? (
-            <>
-              <h1
-                className="font-black text-3xl"
-                style={{ opacity: "0" }}
-              >{`< frontend >`}</h1>
-              <p style={{ opacity: "0" }}>
-                Desarrollador front-end que crea diseños elegantes, interactivos
-                y responsivos
-              </p>
-            </>
-          ) : (
-            <>
-              <h1 className="font-black text-3xl">{`< FRONTEND />`}</h1>
-              <p style={{ opacity: "1" }}>
-                Desarrollador front-end que crea diseños elegantes, interactivos
-                y responsivos
-              </p>
-            </>
-          )}
+          <h1
+            className="font-black text-3xl"
+            style={{ opacity: mouseOverFaceBack || timeAnimationIntro ? 0 : 1 }}
+          >{`< FRONTEND />`}</h1>
+          <p
+            style={{ opacity: mouseOverFaceBack || timeAnimationIntro ? 0 : 1 }}
+          >
+            Desarrollador front-end que crea diseños elegantes, interactivos y
+            responsivos
+          </p>
         </div>
 
         {/* ******* PART LEFT BANNER ******************************************** */}
