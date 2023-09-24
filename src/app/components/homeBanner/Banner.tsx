@@ -5,6 +5,7 @@ import Logos_back from "next/image";
 import Face_back from "next/image";
 import Face_front from "next/image";
 import Logo_front from "next/image";
+import TitleBanner from "./TitleBanner";
 
 export default function Banner() {
   const [mouseOverFaceBack, setMouseOverFaceBack] = useState(false);
@@ -30,51 +31,19 @@ export default function Banner() {
       >
         {/* ******** TITLE BANNER *************************************************************** */}
 
-        <div
-          className="mt-16 text-center w-6/12"
-          style={{
-            animation: timeAnimationIntro
-              ? "watch 150ms 2.4s 1 linear"
-              : "",
-          }}
-        >
-          <h1
-            className="font-black text-3xl"
-            style={{
-              opacity: mouseOverFaceFront || timeAnimationIntro ? 0 : 1,
-            }}
-          >
-            / BACKEND /
-          </h1>
-          <p
-            style={{
-              opacity: mouseOverFaceFront || timeAnimationIntro ? 0 : 1,
-            }}
-          >
-            Desarrollador backend que construye la infraestructura robusta,
-            segura y optimizada
-          </p>
-        </div>
+        <TitleBanner
+          title="/ BACKEND /"
+          description="Desarrollador backend que construye la infraestructura robusta, segura y optimizada"
+          timeAnimationIntro={timeAnimationIntro}
+          mouseOver={mouseOverFaceFront}
+        />
 
-        <div
-          className="mt-16 text-center w-6/12"
-          style={{
-            animation: timeAnimationIntro
-              ? "watch 150ms 2.4s 1 linear "
-              : "",
-          }}
-        >
-          <h1
-            className="font-black text-3xl"
-            style={{ opacity: mouseOverFaceBack || timeAnimationIntro ? 0 : 1 }}
-          >{`< FRONTEND />`}</h1>
-          <p
-            style={{ opacity: mouseOverFaceBack || timeAnimationIntro ? 0 : 1 }}
-          >
-            Desarrollador front-end que crea diseños elegantes, interactivos y
-            responsivos
-          </p>
-        </div>
+        <TitleBanner
+          title={`< FRONTEND />`}
+          description="Desarrollador front-end que crea diseños elegantes, interactivos y responsivos"
+          timeAnimationIntro={timeAnimationIntro}
+          mouseOver={mouseOverFaceBack}
+        />
 
         {/* ******* PART LEFT BANNER ******************************************** */}
 

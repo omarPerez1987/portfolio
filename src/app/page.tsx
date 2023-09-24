@@ -1,6 +1,6 @@
 "use client";
 
-import Banner from "./components/Banner";
+import Banner from "./components/homeBanner/Banner";
 
 export default function Home() {
   return (
