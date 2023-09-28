@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Logos_back from "next/image";
 import Face_back from "next/image";
 import Face_front from "next/image";
-import Logo_front from "next/image";
+import Logos_front from "next/image";
 import TitleBanner from "./TitleBanner";
 
 export default function Banner() {
@@ -27,7 +27,7 @@ export default function Banner() {
     <>
       <main
         className="grid grid-cols-2 grid-rows-1 justify-items-center font-sans"
-        style={{ margin: "2rem 5% ", width: "auto" }}
+        style={{ margin: "2rem 5% 0rem 5%", width: "auto" }}
       >
         {/* ******** TITLE BANNER *************************************************************** */}
 
@@ -155,7 +155,7 @@ export default function Banner() {
               priority={true}
               className="image-front"
             />
-            <Logo_front
+            <Logos_front
               src={"/image/logos_front.png"}
               alt="fragmento codigo frontend"
               width={850}
@@ -199,7 +199,7 @@ export default function Banner() {
               }}
               priority={true}
             />
-            <Logo_front
+            <Logos_front
               src={"/image/logos_front.png"}
               alt="fragmento codigo frontend"
               width={850}
