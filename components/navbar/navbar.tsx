@@ -9,13 +9,14 @@ export default function Navbar() {
     <>
       <section className="bg-black text-white">
         <nav className=" grid-cols-3 grid grid-rows-1 grid-flow-col gap-4 items-center">
-          <div className="hover:animate-pulse">
+          <div>
             <Link href="/">
               <Logo
                 src={"/image/header/logo.png"}
                 alt="logo web"
                 height={150}
                 width={150}
+                className="hover:animate-pulse"
               />
             </Link>
           </div>
